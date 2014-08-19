@@ -10,13 +10,25 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PKRevealing {
                             
     var window: UIWindow?
 
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        // Override point for customization after application launch.
+        let centerVC : ViewController = ViewController()
+        let leftVC : ViewController = ViewController()
+        let rightVC : ViewController = ViewController()
+        
+        centerVC.view.backgroundColor = UIColor.whiteColor()
+        leftVC.view.backgroundColor = UIColor.redColor()
+        rightVC.view.backgroundColor = UIColor.greenColor()
+        
+        let pkvc : PKRevealController = PKRevealController(frontViewController: centerVC,
+            leftViewController: leftVC, rightViewController: rightVC);
+        pkvc.delegate = self;
+        self.window!.rootViewController = pkvc;
+        
         return true
     }
 

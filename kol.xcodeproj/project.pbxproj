@@ -13,6 +13,7 @@
 		C937F9F919A31EE20085BE7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C937F9F719A31EE20085BE7E /* Main.storyboard */; };
 		C937F9FB19A31EE20085BE7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C937F9FA19A31EE20085BE7E /* Images.xcassets */; };
 		C937FA0719A31EE20085BE7E /* kolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C937FA0619A31EE20085BE7E /* kolTests.swift */; };
+		C937FA1619A322A90085BE7E /* libPKRevealController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C937FA1519A322660085BE7E /* libPKRevealController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +23,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = C937F9EA19A31EE20085BE7E;
 			remoteInfo = kol;
+		};
+		C937FA1419A322660085BE7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C937FA1019A322660085BE7E /* PKRevealController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9621E7B1815246000469E41;
+			remoteInfo = PKRevealController;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +44,10 @@
 		C937FA0019A31EE20085BE7E /* kolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C937FA0519A31EE20085BE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C937FA0619A31EE20085BE7E /* kolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kolTests.swift; sourceTree = "<group>"; };
+		C937FA1019A322660085BE7E /* PKRevealController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PKRevealController.xcodeproj; path = PKRevealController/Source/PKRevealController.xcodeproj; sourceTree = "<group>"; };
+		C937FA1719A3230D0085BE7E /* PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKRevealController.h; path = ../PKRevealController/Headers/PKRevealController.h; sourceTree = "<group>"; };
+		C937FA1819A3230D0085BE7E /* UIViewController+PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PKRevealController.h"; path = "../PKRevealController/Headers/UIViewController+PKRevealController.h"; sourceTree = "<group>"; };
+		C937FA2119A327070085BE7E /* ugh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ugh.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C937FA1619A322A90085BE7E /* libPKRevealController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +72,11 @@
 		C937F9E219A31EE20085BE7E = {
 			isa = PBXGroup;
 			children = (
+				C937FA2119A327070085BE7E /* ugh.h */,
 				C937F9ED19A31EE20085BE7E /* kol */,
 				C937FA0319A31EE20085BE7E /* kolTests */,
 				C937F9EC19A31EE20085BE7E /* Products */,
+				C937FA1A19A3237E0085BE7E /* externals */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +92,7 @@
 		C937F9ED19A31EE20085BE7E /* kol */ = {
 			isa = PBXGroup;
 			children = (
+				C937FA1919A323620085BE7E /* PKRevealController */,
 				C937F9F019A31EE20085BE7E /* AppDelegate.swift */,
 				C937F9F519A31EE20085BE7E /* ViewController.swift */,
 				C937F9F719A31EE20085BE7E /* Main.storyboard */,
@@ -110,6 +126,31 @@
 				C937FA0519A31EE20085BE7E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C937FA1119A322660085BE7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C937FA1519A322660085BE7E /* libPKRevealController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C937FA1919A323620085BE7E /* PKRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				C937FA1719A3230D0085BE7E /* PKRevealController.h */,
+				C937FA1819A3230D0085BE7E /* UIViewController+PKRevealController.h */,
+			);
+			name = PKRevealController;
+			sourceTree = "<group>";
+		};
+		C937FA1A19A3237E0085BE7E /* externals */ = {
+			isa = PBXGroup;
+			children = (
+				C937FA1019A322660085BE7E /* PKRevealController.xcodeproj */,
+			);
+			name = externals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +220,12 @@
 			mainGroup = C937F9E219A31EE20085BE7E;
 			productRefGroup = C937F9EC19A31EE20085BE7E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C937FA1119A322660085BE7E /* Products */;
+					ProjectRef = C937FA1019A322660085BE7E /* PKRevealController.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C937F9EA19A31EE20085BE7E /* kol */,
@@ -186,6 +233,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C937FA1519A322660085BE7E /* libPKRevealController.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPKRevealController.a;
+			remoteRef = C937FA1419A322660085BE7E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C937F9E919A31EE20085BE7E /* Resources */ = {
@@ -333,7 +390,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = kol/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ugh.h;
 			};
 			name = Debug;
 		};
@@ -344,7 +403,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = kol/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ugh.h;
 			};
 			name = Release;
 		};
